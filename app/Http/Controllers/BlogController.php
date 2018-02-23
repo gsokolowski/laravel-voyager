@@ -9,8 +9,12 @@ class BlogController extends Controller
 {
     public function index() {
 
-        //$posts = Post::all();
-        $posts = Post::paginate(2);
+        // $posts = Post::all();
+        // $posts = Post::paginate(2);
+
+        $posts = Post::where([
+            'status' => 'PUBLISHED'
+        ])->orderBy('id', 'desc')->paginate(3);
 
         return view('posts.index', ['posts' => $posts]);
     }
@@ -32,16 +36,6 @@ class BlogController extends Controller
     public function show(Post $post) {
 
         return view('posts.show', ['post'=>$post]);
-    }
-
-    public function about() {
-
-        return view('about.show');
-    }
-
-    public function contact() {
-
-        return view('contact.show');
     }
 
 

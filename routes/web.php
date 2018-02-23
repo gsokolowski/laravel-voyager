@@ -1,5 +1,9 @@
 <?php
 ini_set('xdebug.max_nesting_level', 300);
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +23,12 @@ Route::get('/posts/{post}', "BlogController@show");
 Route::get('/about', "PageController@about");
 Route::get('/contact', "PageController@contact");
 
+Route::post('/contactform', function (Request $request) {
+
+    $all = Input::all();
+    dd($all);
+   // dd($request);
+});
 
 
 /* voyager routes

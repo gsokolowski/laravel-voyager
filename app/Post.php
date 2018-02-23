@@ -13,9 +13,12 @@ class Post extends Model
     }
 
 
-    public function findBySlug($slug) {
-        return $this->where('slug', $slug)->first();
-    }
+//    public function findBySlug($slug) {
+//        return static::where([
+//            'slug' => $slug,
+//            'status' => 'PUBLISHED'
+//        ])->firstOrFail();
+//    }
 
     // static call
 //    public static function findBySlugStatic($slug) {
