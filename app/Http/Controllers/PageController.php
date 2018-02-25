@@ -20,4 +20,11 @@ class PageController extends Controller
         return view('pages.contact', ['page'=>$page]);
     }
 
+    public static function gallery() {
+
+        //$page = Page::findBySlug('gallery');
+        $page = 'page';
+        return view('pages.gallery', ['page'=>$page]);
+    }
+
 }

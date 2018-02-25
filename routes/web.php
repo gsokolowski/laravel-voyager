@@ -22,11 +22,12 @@ Route::get('/posts/{post}', "BlogController@show");
 
 Route::get('/about', "PageController@about");
 Route::get('/contact', "PageController@contact");
+Route::get('/gallery', "PageController@gallery");
 
 Route::post('/contactform', function (Request $request) {
 
-    $all = Input::all();
-    dd($all);
+//    $all = Input::all();
+//    dd($all);
    // dd($request);
 });
 

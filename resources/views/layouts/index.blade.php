@@ -22,6 +22,9 @@
     <link href="/css/clean-blog.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
 
+    <link href="/css/slider-reset.css" rel="stylesheet">
+    <link href="/css/slider-style.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -48,6 +51,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="/js/clean-blog.min.js"></script>
+    <!-- main.js for slider-->
+    <script src="/js/slider-main.js"></script>
 
   </body>
 
